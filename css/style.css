@@ -168,7 +168,7 @@ footer p{
 
     #main_index{
         grid-template-columns: 1fr; 
-        grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 1fr 1fr;  
+        grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr;  
         grid-template-areas: 
         "h1"
         "txt1"
@@ -178,6 +178,29 @@ footer p{
         "txt3"
         "img3";
         background-color: rgb(247, 232, 217);
+    }
+
+    #main_index .caja_h1{
+        width: auto;
+    }
+
+    .caja1_texto{
+        width: fit-content;
+        justify-self: center;
+    }
+
+    .caja2_texto{
+        width: fit-content;
+        justify-self: center;
+    }
+
+    .caja3_texto{
+        width: fit-content;
+        justify-self: center;
+    }
+
+    #main_index img{
+        width: 100%;
     }
 }
 
@@ -240,9 +263,6 @@ footer p{
     text-align: center;
 }
 
-#main_boxes div img{
-}
-
 #main_boxes div h2{
     text-decoration: underline;
 }
@@ -260,10 +280,39 @@ footer p{
 
 /*Vista Mobile Boxes*/
 
-@media (max-width: 576px) {
-    #grid_container{
-        grid-template-areas: 1fr;
-}
+@media (max-width: 576px){
+
+    #main_boxes{
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto 1fr 1fr auto;  
+        grid-template-areas: 
+        "h1b"
+        "b1"
+        "b2"
+        "h3b";
+        background-color: rgb(247, 232, 217);
+    }
+
+    #main_boxes .caja_h1b{
+        height: fit-content;
+    }
+
+    #main_boxes .box1{
+        justify-self: center;
+        align-self: center;
+        margin-right: 0px;
+        width: auto;
+    }
+
+    #main_boxes .box2{
+        justify-self: center;
+        width: auto;
+        margin-left: 0;
+    }
+
+    #main_boxes h3{
+        width: 65%;
+    }
 }
 
 /*Main de talleres*/
