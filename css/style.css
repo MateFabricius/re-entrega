@@ -1,0 +1,452 @@
+
+/*Estilo de Body*/
+
+body{ 
+    color: rgb(93, 38, 40);
+    background-color: rgb(247, 232, 217);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Header*/
+
+header{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+nav ul{
+    padding-left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+header nav ul li{
+    list-style: none;
+}
+
+header nav ul li a{
+    text-decoration: none;
+   background-color: rgb(233, 195, 174);
+   color: rgb(93, 38, 40);
+   padding: 10px 12px 12px 13px;
+   border-radius: 10px;
+}
+
+/*Footer*/
+
+footer{
+    background-color: rgb(247, 232, 217);
+    border-top: solid 2px rgb(93, 38, 40);
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+footer p{
+    color: rgb(93, 38, 40);
+    font-size: large; 
+}
+
+.display_redes{
+    display: flex;
+    align-items: center;
+} 
+
+/*Main de Index*/
+
+#main_index{
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto 500px 500px 500px; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "h1 h1"
+      "txt1 img1"
+      "img2 txt2"
+      "txt3 img3"; 
+    background-color: rgb(233, 195, 174);
+}
+
+.caja_h1{
+    grid-area: h1;
+    background-color: rgb(247, 232, 217);
+    border-bottom: solid 2px rgb(93, 38, 40);
+    display: flex;
+    justify-content: center;
+}
+
+.h1_main{
+    text-align: center;
+    background-color: rgb(233, 195, 174);
+    border: dashed 3px rgb(93, 38, 40);
+    padding: 10px;
+    width: 65%;
+}
+
+.caja1_imagen{
+    grid-area: img1;
+    justify-self: start;
+    align-self: start;
+}
+
+.caja1_texto{
+    grid-area: txt1;
+    background-color:rgb(247, 232, 217);
+    height: 500px;
+    width: 600px;
+    justify-self: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja1_texto h2{
+    text-decoration: underline;
+}
+
+.caja2_imagen{
+    grid-area: img2;
+    justify-self: end;
+}
+
+.caja2_texto{
+    grid-area: txt2;
+    background-color:rgb(247, 232, 217);
+    height: 500px;
+    width: 600px;
+    justify-self: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja2_texto h2{
+    text-decoration: underline;
+}
+
+.caja2_texto p{ 
+    text-align: center;
+    width: 90%;
+}
+
+.caja3_imagen{
+    grid-area: img3;
+}
+
+.caja3_texto{
+    grid-area: txt3;
+    background-color:rgb(247, 232, 217);
+    height: 500px;
+    width: 600px;
+    justify-self: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja3_texto h2{
+    text-decoration: underline;
+}
+
+/*Vista Mobile Index*/
+
+@media (max-width: 576px){
+
+    #main_index{
+        grid-template-columns: 1fr; 
+        grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 1fr 1fr;  
+        grid-template-areas: 
+        "h1"
+        "txt1"
+        "img1"
+        "txt2"
+        "img2"
+        "txt3"
+        "img3";
+        background-color: rgb(247, 232, 217);
+    }
+}
+
+/*Main de Boxes*/
+
+#main_boxes{
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 0.3fr 1.5fr 1.5fr 0.5fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "h1b h1b"
+      "b1 b2"
+      "b1 b2"
+      "h3b h3b"; 
+}
+  
+.caja_h1b{
+    grid-area: h1b;
+    background-color: rgb(247, 232, 217);
+    border-bottom: solid 2px rgb(93, 38, 40);
+    display: flex;
+    justify-content: center;
+}
+
+.caja_h1b h1{
+    text-align: center;
+    background-color: rgb(233, 195, 174);
+    border: dashed 3px rgb(93, 38, 40);
+    padding: 10px;
+    width: 65%;
+}
+
+.box1{
+    grid-area: b1;
+    justify-self: end;
+    margin-top: 25px;
+    margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 2px rgb(93, 38, 40);
+    width: 60%;
+}
+
+.box2{
+    grid-area: b2;
+    justify-self: start;
+    margin-top: 25px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 2px rgb(93, 38, 40);
+    width: 60%;
+}
+
+.box2 p{
+    width: 500px;
+    text-align: center;
+}
+
+#main_boxes div img{
+}
+
+#main_boxes div h2{
+    text-decoration: underline;
+}
+
+#main_boxes h3{
+    grid-area: h3b;
+    justify-self: center;
+    align-self: center;
+    background-color: rgb(233, 195, 174);
+    text-align: center;
+    border: dashed rgb(93, 38, 40);
+    padding: 10px;
+    width: 800px;
+}
+
+/*Vista Mobile Boxes*/
+
+@media (max-width: 576px) {
+    #grid_container{
+        grid-template-areas: 1fr;
+}
+}
+
+/*Main de talleres*/
+
+#main_talleres{
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 0.3fr 1.5fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "h1t h1t"
+      "txttall txttall"; 
+}
+
+.caja_h1t{
+    grid-area: h1t;
+    background-color: rgb(247, 232, 217);
+    border-bottom: solid 2px rgb(93, 38, 40);
+    display: flex;
+    justify-content: center;
+}
+
+.txt_h1t{
+    text-align: center;
+    background-color: rgb(233, 195, 174);
+    border: dashed 3px rgb(93, 38, 40);
+    padding: 10px;
+    width: 65%;
+}
+
+.caja_txt_tall{
+    grid-area: txttall;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+.caja_txt_tall h2{
+    text-decoration: none;
+    text-align: center;
+    background-color: rgb(233, 195, 174);
+    border: solid 2px rgb(93, 38, 40);
+    padding: 10px 180px 10px 180px;
+}
+
+.caja_txt_tall a{
+    text-decoration: none;
+    background-color: rgb(233, 195, 174);
+    color: rgb(93, 38, 40);
+    padding: 10px 12px 12px 13px;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.caja_txt_tall img{
+    margin: 10px;
+    border: solid 2px rgb(93, 38, 40);
+}
+
+/*Main de Envios*/
+
+#main_envios{
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 0.3fr 0,5fr 1.5fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "h1e h1e"
+      "info info"
+      "map map"; 
+}
+
+.caja_h1e{
+    grid-area: h1e;
+    background-color: rgb(247, 232, 217);
+    border-bottom: solid 2px rgb(93, 38, 40);
+    display: flex;
+    justify-content: center;
+}
+
+.h1e{
+    text-align: center;
+    background-color: rgb(233, 195, 174);
+    border: dashed 3px rgb(93, 38, 40);
+    padding: 10px;
+    width: 65%;
+
+}
+
+.info_envios{
+    grid-area: info;
+    justify-self: center;
+    text-align: center;
+}
+
+.info_envios h2{
+    text-decoration: underline;
+}
+
+.caja_map{
+    grid-area: map;
+    justify-self: center;
+    background-color: rgb(233, 195, 174);
+    border: solid 2px rgb(93, 38, 40);
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    width: fit-content;
+}
+
+.txt_caja_map div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.txt_caja_map div{
+    width: 500px;
+    text-align: center;
+}
+
+.txt_caja_map div h3{
+    text-decoration: underline;
+}
+
+.caja_map iframe{
+    margin: 15px;
+}
+
+/*Main de Contacto*/
+
+#main_contacto{
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 0.3fr 0,5fr 1.5fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "h1c h1c"
+      "hora hora"
+      'lugar lugar'
+      'tel tel'
+      'mail mail'; 
+}
+
+.caja_h1c{
+    grid-area: h1c;
+    background-color: rgb(247, 232, 217);
+    border-bottom: solid 2px rgb(93, 38, 40);
+    display: flex;
+    justify-content: center;
+}
+
+.h1c{
+    text-align: center;
+    background-color: rgb(233, 195, 174);
+    border: dashed 3px rgb(93, 38, 40);
+    padding: 10px;
+    width: 65%;
+}
+
+#main_contacto h2{
+    text-decoration: underline;
+}
+
+.caja_hora{
+    grid-area: hora;
+    text-align: center;
+}
+
+.caja_lugar{
+    grid-area: lugar;
+    text-align: center;
+}
+
+.caja_tel{
+    grid-area: tel;
+    text-align: center;
+}
+
+.caja_mail{
+    grid-area: mail;
+    text-align: center;
+}
