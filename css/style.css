@@ -168,7 +168,7 @@ footer p{
 
     #main_index{
         grid-template-columns: 1fr; 
-        grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr;  
+        grid-template-rows: auto auto 1fr auto 1fr auto 1fr;  
         grid-template-areas: 
         "h1"
         "txt1"
@@ -301,17 +301,26 @@ footer p{
         justify-self: center;
         align-self: center;
         margin-right: 0px;
-        width: auto;
+        width: 90%;
+        text-align: center;
     }
 
     #main_boxes .box2{
         justify-self: center;
-        width: auto;
+        width: 90%;
         margin-left: 0;
+    }
+
+    #main_boxes .box2 p{
+        width: auto;
     }
 
     #main_boxes h3{
         width: 65%;
+    }
+
+    footer p{
+        text-align: center;
     }
 }
 
